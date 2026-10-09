@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login | BlogSphere</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/auth.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container site-nav">
+        <a href="landing.html" class="brand">
+          <span class="brand-mark">B</span>
+          <span>BlogSphere</span>
+        </a>
+      </div>
+    </header>
+
+    <main class="auth-page">
+      <div class="auth-layout">
+        <aside class="auth-aside">
+          <div class="auth-aside-content">
+            <span class="brand-mark">B</span>
+            <h2>Your next great idea starts here.</h2>
+            <p>Pick up where you left off and keep learning with stories from the BlogSphere community.</p>
+          </div>
+          <div class="auth-aside-note">Share knowledge. Inspire ideas.</div>
+        </aside>
+
+        <div class="auth-card">
+          <h1>Welcome back</h1>
+          <p>Sign in to continue publishing and connecting with your community.</p>
+
+          <p class="auth-local-notice">Local demo: your account stays in this browser. Your password is not sent to a server.</p>
+          <div id="authMessage" class="auth-message" role="status" aria-live="polite" hidden></div>
+
+          <form id="loginForm" class="auth-form">
+            <div class="form-group">
+              <label for="loginEmail">Email</label>
+              <input id="loginEmail" type="email" name="email" placeholder="you@example.com" required />
+            </div>
+
+            <div class="form-group">
+              <label for="loginPassword">Password</label>
+              <input id="loginPassword" type="password" name="password" placeholder="Your password" required />
+            </div>
+
+            <div class="auth-meta">
+              <span class="text-muted">Need an account?</span>
+              <a href="register.html">Create one</a>
+            </div>
+
+            <button type="submit" class="btn btn-primary" id="loginButton">Login</button>
+          </form>
+        </div>
+      </div>
+    </main>
+
+    <div id="toastContainer" class="toast-container" aria-live="polite"></div>
+
+    <script src="js/storage.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>

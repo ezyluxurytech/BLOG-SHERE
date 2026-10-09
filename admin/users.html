@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Manage Users | BlogSphere</title>
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/dashboard.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container site-nav">
+        <a href="../index.html" class="brand">
+          <span class="brand-mark">B</span>
+          <span>BlogSphere</span>
+        </a>
+        <button class="nav-toggle" aria-label="Toggle navigation">☰</button>
+        <nav class="nav-links" aria-label="Main navigation">
+          <a href="../index.html" class="nav-link">Home</a>
+          <a href="../search.html" class="nav-link">Explore</a>
+          <a href="index.html" class="nav-link">Admin</a>
+          <a href="users.html" class="nav-link active">Users</a>
+          <a href="posts.html" class="nav-link">Posts</a>
+          <a href="comments.html" class="nav-link">Comments</a>
+        </nav>
+        <div class="nav-actions" id="navActions"></div>
+      </div>
+    </header>
+
+    <main class="section">
+      <div class="container">
+        <div class="page-header">
+          <h1>User management</h1>
+          <p>Review user activity, update roles and change account status.</p>
+        </div>
+
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Username</th>
+                <th>Role</th>
+                <th>Status</th>
+                <th>Joined</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody id="usersTableBody"></tbody>
+          </table>
+        </div>
+      </div>
+    </main>
+
+    <div id="toastContainer" class="toast-container" aria-live="polite"></div>
+
+    <script src="../js/storage.js"></script>
+    <script src="../js/auth.js"></script>
+    <script src="../js/admin.js"></script>
+    <script src="../js/app.js"></script>
+  </body>
+</html>

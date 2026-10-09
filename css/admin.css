@@ -1,0 +1,67 @@
+.admin-layout {
+  display: grid;
+  gap: 24px;
+}
+
+.admin-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.admin-panel {
+  padding: 22px;
+}
+
+.admin-panel h3 {
+  margin: 0 0 10px;
+  font-size: 1.05rem;
+}
+
+.admin-panel .value {
+  font-size: 2.1rem;
+  font-weight: 800;
+  letter-spacing: -0.05em;
+}
+
+.admin-panel .muted {
+  color: var(--muted);
+}
+
+.admin-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 18px;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.admin-toolbar .search-box {
+  flex: 1;
+  min-width: 220px;
+}
+
+.search-box {
+  display: flex;
+  align-items: center;
+  padding: 0 12px;
+  gap: 8px;
+}
+
+.search-box input {
+  border: none;
+  outline: none;
+  padding-left: 0;
+  background: transparent;
+}
+
+@media (max-width: 900px) {
+  .admin-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .admin-grid {
+    grid-template-columns: 1fr;
+  }
+}

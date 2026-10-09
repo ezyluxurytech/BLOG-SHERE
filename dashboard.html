@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard | BlogSphere</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/dashboard.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container site-nav">
+        <a href="index.html" class="brand">
+          <span class="brand-mark">B</span>
+          <span>BlogSphere</span>
+        </a>
+        <button class="nav-toggle" aria-label="Toggle navigation">☰</button>
+        <nav class="nav-links" aria-label="Main navigation">
+          <a href="index.html" class="nav-link">Home</a>
+          <a href="search.html" class="nav-link">Explore</a>
+          <a href="categories.html" class="nav-link">Categories</a>
+          <a href="dashboard.html" class="nav-link active">Dashboard</a>
+          <a href="saved-posts.html" class="nav-link">Saved</a>
+        </nav>
+        <div class="nav-actions" id="navActions"></div>
+      </div>
+    </header>
+
+    <main class="section">
+      <div class="container">
+        <div class="page-header" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap;">
+          <div>
+            <h1>Dashboard</h1>
+            <p>Track your writing, engagement, and saved content.</p>
+          </div>
+          <a href="create-post.html" class="btn btn-primary">+ Create New Post</a>
+        </div>
+
+        <div class="stats-grid">
+          <div class="stat-card"><div class="label">Total Posts</div><div class="value" id="totalPostsCount">0</div></div>
+          <div class="stat-card"><div class="label">Published Posts</div><div class="value" id="publishedPostsCount">0</div></div>
+          <div class="stat-card"><div class="label">Draft Posts</div><div class="value" id="draftPostsCount">0</div></div>
+          <div class="stat-card"><div class="label">Total Views</div><div class="value" id="totalViewsCount">0</div></div>
+          <div class="stat-card"><div class="label">Total Likes</div><div class="value" id="totalLikesCount">0</div></div>
+          <div class="stat-card"><div class="label">Saved Posts</div><div class="value" id="savedPostsCount">0</div></div>
+        </div>
+
+        <div class="section-header">
+          <h2 class="section-title" style="font-size: 2rem;">My Posts</h2>
+        </div>
+
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Title</th>
+                <th>Category</th>
+                <th>Status</th>
+                <th>Views</th>
+                <th>Likes</th>
+                <th>Date</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody id="myPostsTableBody"></tbody>
+          </table>
+        </div>
+      </div>
+    </main>
+
+    <div id="toastContainer" class="toast-container" aria-live="polite"></div>
+
+    <script src="js/storage.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/dashboard.js"></script>
+    <script src="js/posts.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>
